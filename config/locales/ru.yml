@@ -1,0 +1,78 @@
+ru:
+  categories:
+    access_denied: У вас нет прав на доступ к этому ресурсу
+
+    index:
+      subtitle: Список категорий
+      new_forum_category: Создать категорию форума
+
+  forums:
+    access_denied: У вас нет прав на доступ к этому ресурсу
+
+  topics:
+    access_denied: У вас нет прав на доступ к этому ресурсу
+
+    form:
+      new: Новая тема
+
+  posts:
+    access_denied: У вас нет прав на доступ к этому ресурсу
+
+  flash:
+    actions:
+      create:
+        notice: "%{resource_name} успешно создан."
+      update:
+        notice: "%{resource_name} успешно изменен."
+      destroy:
+        notice: "%{resource_name} успешно удален."
+
+    categories:
+      create:
+        notice: Категория форума успешно создана.
+      update:
+        notice: Категория форума успешно изменена.
+      destroy:
+        notice: Категория форума успешно удалена.
+
+    forums:
+      create:
+        notice: Раздел форума успешно создан.
+      update:
+        notice: Раздел форума успешно изменен.
+      destroy:
+        notice: Раздел форума успешно удален.
+
+    topics:
+      create:
+        notice: Тема успешно создана.
+      update:
+        notice: Тема успешно изменена.
+      destroy:
+        notice: Тема успешно удалена.
+
+    posts:
+      create:
+        notice: Сообщение успешно создано.
+      update:
+        notice: Сообщение успешно изменено.
+      destroy:
+        notice: Сообщение успешно удалено.
+
+  helpers:
+    submit:
+      topic:
+        new: Новая тема
+        create: Создать тему
+        update: Сохранить
+
+  activerecord:
+    models:
+      forum:
+        one: Форум
+        few: Форумы
+        many: Форумы
+    attributes:
+      topic:
+        title: Заголовок
+        body: Сообщение

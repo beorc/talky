@@ -54,3 +54,11 @@ blockquote {
   margin: 10px 0px 0px 25px;
   padding: 10px;
  }
+
+caption, th {
+  text-align: center;
+}
+
+.module {
+  textarea { height: 200px; }
+}
