@@ -16,6 +16,9 @@ ru:
       new: Новый раздел
       subtitle: Разделы
 
+    show:
+      subtitle: Раздел форума
+
   topics:
     access_denied: У вас нет прав на доступ к этому ресурсу
 
@@ -44,6 +47,7 @@ ru:
         notice: Категория форума успешно изменена.
       destroy:
         notice: Категория форума успешно удалена.
+      access_denied: У вас нет прав на доступ к этому ресурсу
 
     forums:
       create:
@@ -52,6 +56,7 @@ ru:
         notice: Раздел форума успешно изменен.
       destroy:
         notice: Раздел форума успешно удален.
+      access_denied: У вас нет прав на доступ к этому ресурсу
 
     topics:
       create:
@@ -60,6 +65,7 @@ ru:
         notice: Тема успешно изменена.
       destroy:
         notice: Тема успешно удалена.
+      access_denied: У вас нет прав на доступ к этому ресурсу
 
     posts:
       create:
@@ -68,6 +74,7 @@ ru:
         notice: Сообщение успешно изменено.
       destroy:
         notice: Сообщение успешно удалено.
+      access_denied: У вас нет прав на доступ к этому ресурсу
 
   helpers:
     submit:

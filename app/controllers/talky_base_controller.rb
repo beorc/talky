@@ -1,5 +1,6 @@
 class TalkyBaseController < ApplicationController
   before_filter :authorized_only, except: [:index, :show]
+  before_filter :authorize_resource
 
   private
 

@@ -3,44 +3,41 @@ class TopicsController < TalkyBaseController
   respond_to :html
 
   def show
-    @topic = Topic.find(params[:id])
-    @topic.hit! if @topic
-  end
-
-  def new
-    @forum = Forum.find(params[:forum_id])
-    @topic = Topic.new
+    resource.hit!
   end
 
   def create
-    @forum = Forum.find(params[:forum_id])
-    @topic = @forum.topics.build(params[:topic])
-    @topic.user = current_user
-
-    if @topic.save
-      respond_with @topic
+    if resource.save
+      respond_with resource
     else
       render :action => 'new'
     end
   end
 
-  def edit
-    @topic = Topic.find(params[:id])
-  end
-
   def update
-    @topic = Topic.find(params[:id])
-
-    if @topic.update_attributes(params[:topic])
-      respond_with @topic
+    if resource.update_attributes(params[:topic])
+      respond_with resource
     end
   end
 
   def destroy
-    @topic = Topic.find(params[:id])
-
-    if @topic.destroy
-      respond_with @topic, location: forum_path(@topic.forum)
+    if resource.destroy
+      respond_with resource, location: forum_path(resource.forum)
     end
+  end
+
+  private
+
+  def resource
+    return @topic if @topic.present?
+
+    forum_id = params[:forum_id]
+    @forum = Forum.find(forum_id) if forum_id.present?
+
+    id = params[:id]
+    return @topic = Topic.find(id) if id.present?
+    @topic = Topic.new(params[:topic])
+    @topic.user = current_user
+    @topic
   end
 end
