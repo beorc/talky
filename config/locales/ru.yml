@@ -1,29 +1,64 @@
 ru:
   categories:
     access_denied: У вас нет прав на доступ к этому ресурсу
-
     index:
       subtitle: Список категорий
       new_forum_category: Создать категорию форума
-
     form:
       new: Новая категория
+    forum:
+      no_posts: Нет сообщений
+    category:
+      new_forum: Новый форум
+      edit_category: Редактировать категорию
+      delete_category: Удалить категорию
+      confirm_delete: Удалить категорию?
+      table_headers:
+        forum: Раздел форума
+        last_post: Последнее сообщение
 
   forums:
     access_denied: У вас нет прав на доступ к этому ресурсу
-
     form:
       new: Новый раздел
       subtitle: Разделы
-
     show:
       subtitle: Раздел форума
+      back_to_forum_list: Назад к списку разделов форума
+      new_topic: Новая тема
+      edit_forum: Редактировать форум
+      delete_forum: Удалить форум
+      confirm_delete: Удалить раздел?
+      table_headers:
+        replies: Ответы
+        views: Просмотры
+        last_post: Последнее сообщение
+    topic:
+      by: 'от:'
 
   topics:
     access_denied: У вас нет прав на доступ к этому ресурсу
-
     form:
       new: Новая тема
+    show:
+      back_to_forum: Назад к разделу форума
+      edit: Редактировать
+      delete: Удалить
+      confirm_delete: Удалить тему?
+      unstick: Открепить
+      sticky: Закрепить
+      unlock: Разлокировать
+      lock: Заблокировать
+    post:
+      author:
+        posts: 'Сообщений:'
+        registered: 'Дата регистрации:'
+      posted: 'Создано:'
+      reply: Ответить
+      quote: Цитировать
+      edit: Редактировать
+      delete: Удалить
+      confirm_delete: Удалить сообщение?
 
   posts:
     access_denied: У вас нет прав на доступ к этому ресурсу

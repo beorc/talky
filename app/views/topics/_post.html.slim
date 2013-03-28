@@ -1,25 +1,28 @@
 tr
   td.post_author rowspan="2"
-    span.name = post.user.username
+    span.name = post.user.friendly_title
     span.avatar
     span.info.smaller
       div
-        'Posts&nbsp;
+        = t('.author.posts')
+        '&nbsp;
         = post.user.posts.count
       div
-        'Registered&nbsp;
+        = t('.author.registered')
+        '&nbsp;
         = post.user.created_at.to_s(:joined)
   td.post_header
     span.left.post_date.smaller
-      'Posted&nbsp;
+      = t('.posted')
+      '&nbsp;
       = post.created_at
     span.right.controls
-      = link_to "Reply", new_topic_post_path(@topic)
-      = link_to "Quote", new_topic_post_path(@topic, :quote => post)
+      = link_to t('.reply'), new_topic_post_path(@topic)
+      = link_to t('.quote'), new_topic_post_path(@topic, :quote => post)
       - if can? :edit, post
-        = link_to "Edit", edit_post_path(post)
+        = link_to t('.edit'), edit_post_path(post)
       - if can? :destroy, post
-        = link_to "Delete", post, :confirm => "Are you sure?", :method => :delete
+        = link_to t('.delete'), post, :confirm => t('.confirm_delete'), :method => :delete
 tr
   td.post_body
     = simple_format(auto_link(post.body))
