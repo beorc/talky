@@ -1,0 +1,18 @@
+.row-fluid
+  .offset3.span6
+    = simple_form_for [@forum, @topic] do |f|
+      .module
+        .module_header = friendly_title(@topic, t('.new'))
+        .module_subheader.smaller
+          = Forum.model_name.human
+          ':&nbsp;
+          = @topic.forum.title
+        .module_body
+          fieldset
+            = f.input :title, input_html: { class: 'span12' }
+          - if @topic.new_record?
+            = f.input :body, as: :text, input_html: { class: 'span12' }
+        .module_footer
+          = f.submit class: 'btn btn-primary'
+          '&nbsp;
+          = link_to t(:cancel), :back, class: 'btn'

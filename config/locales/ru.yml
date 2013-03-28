@@ -6,8 +6,15 @@ ru:
       subtitle: Список категорий
       new_forum_category: Создать категорию форума
 
+    form:
+      new: Новая категория
+
   forums:
     access_denied: У вас нет прав на доступ к этому ресурсу
+
+    form:
+      new: Новый раздел
+      subtitle: Разделы
 
   topics:
     access_denied: У вас нет прав на доступ к этому ресурсу
@@ -17,6 +24,9 @@ ru:
 
   posts:
     access_denied: У вас нет прав на доступ к этому ресурсу
+
+    form:
+      new: Новое сообщение
 
   flash:
     actions:
@@ -61,18 +71,54 @@ ru:
 
   helpers:
     submit:
+      category:
+        new: Новая категория форума
+        create: Создать категорию
+        update: Сохранить
+      forum:
+        new: Новый раздел форума
+        create: Создать раздел
+        update: Сохранить
       topic:
         new: Новая тема
         create: Создать тему
         update: Сохранить
+      post:
+        new: Новое сообщение
+        create: Создать сообщение
+        update: Сохранить
 
   activerecord:
     models:
+      category:
+        one: Категория
+        few: Категории
+        many: Категории
       forum:
         one: Форум
         few: Форумы
         many: Форумы
+      topic:
+        one: Тема
+        few: Темы
+        many: Темы
+      post:
+        one: Сообщение
+        few: Сообщения
+        many: Сообщения
     attributes:
+      category:
+        title: Заголовок
+        position: Позиция
+        state: Активная
+      forum:
+        category: Категория
+        title: Заголовок
+        description: Описание
+        position: Позиция
+        state: Состояние
       topic:
         title: Заголовок
+        body: Сообщение
+      post:
         body: Сообщение

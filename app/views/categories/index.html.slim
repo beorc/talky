@@ -1,0 +1,4 @@
+.container
+  - if can? :manage, Category
+    .right.controls = link_to t(".new_forum_category"), new_category_path
+  = render @categories
