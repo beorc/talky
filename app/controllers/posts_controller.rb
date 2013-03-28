@@ -15,7 +15,7 @@ class PostsController < TalkyBaseController
     if resource.save
       #flash[:notice] = "Post was successfully created."
       #redirect_to topic_path(@post.topic)
-      respond_with resource
+      respond_with resource, location: topic_path(resource.topic)
     else
       render :action => 'new'
     end
@@ -57,7 +57,10 @@ class PostsController < TalkyBaseController
     return @post = Post.find(id) if id.present?
 
     @post = Post.new(params[:post])
-    @post.forum = @topic.forum if @topic.present?
+    if @topic.present?
+      @post.topic = @topic
+      @post.forum = @topic.forum
+    end
     @post.user = current_user
   end
 end

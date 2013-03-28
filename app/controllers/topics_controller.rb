@@ -1,9 +1,11 @@
 class TopicsController < TalkyBaseController
   responders :flash
   respond_to :html
+  has_scope :page, default: 1
 
   def show
     resource.hit!
+    @posts = apply_scopes(resource.posts)
   end
 
   def create
@@ -37,6 +39,7 @@ class TopicsController < TalkyBaseController
     id = params[:id]
     return @topic = Topic.find(id) if id.present?
     @topic = Topic.new(params[:topic])
+    @topic.forum = @forum if @forum.present?
     @topic.user = current_user
     @topic
   end

@@ -4,7 +4,6 @@ require "cancan"
 require "rails_autolink"
 require "simple_form"
 require "responders"
-require "kaminari"
 
 module Talky
 end

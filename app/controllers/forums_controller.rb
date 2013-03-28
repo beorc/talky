@@ -1,6 +1,11 @@
 class ForumsController < TalkyBaseController
   responders :flash
   respond_to :html
+  has_scope :page, default: 1
+
+  def show
+    @topics = apply_scopes(resource.topics)
+  end
 
   def create
     if resource.save
