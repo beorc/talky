@@ -1,6 +1,7 @@
 class LanguageValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
-    if record.language.present? && record.language != value.language.to_s
+    characters = value.gsub(/\d+/, "").squeeze(" ").strip
+    if record.language.present? && value.present? && record.language != characters.language.to_s
       message = I18n.t('activerecord.errors.messages.language', language: I18n.t(record.language))
       record.errors.add(attribute, message)
     end

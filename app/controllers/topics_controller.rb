@@ -20,6 +20,8 @@ class TopicsController < TalkyBaseController
     params[:topic].delete :body
     if resource.update_attributes(params[:topic])
       respond_with resource
+    else
+      render :action => 'edit'
     end
   end
 

@@ -2,6 +2,8 @@ class PostsController < TalkyBaseController
   responders :flash
   respond_to :html
 
+  helper_method :topic_post_path
+
   def new
     if params[:quote]
       quote_post = Post.find(params[:quote])
@@ -25,7 +27,9 @@ class PostsController < TalkyBaseController
     if resource.update_attributes(params[:post])
       #flash[:notice] = "Post was successfully updated."
       #redirect_to topic_path(@post.topic)
-      respond_with resource
+      respond_with resource, location: topic_path(@post.topic)
+    else
+      render :action => 'edit'
     end
   end
 
@@ -48,7 +52,10 @@ class PostsController < TalkyBaseController
   private
 
   def resource
-    return @post if @post.present?
+    if @post.present?
+      @topic = @post.topic
+      return @post
+    end
 
     topic_id = params[:topic_id]
     @topic = Topic.find(topic_id) if topic_id.present?
@@ -62,5 +69,9 @@ class PostsController < TalkyBaseController
       @post.forum = @topic.forum
     end
     @post.user = current_user
+  end
+
+  def topic_post_path(topic, post, options)
+    post_path(post)
   end
 end
