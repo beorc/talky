@@ -164,3 +164,7 @@ en:
         body: Body
       post:
         body: Body
+    errors:
+      messages:
+        language: "wrong post language, this section uses: %{language}"
+

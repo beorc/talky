@@ -1,3 +1,5 @@
+require Talky::Engine.validator_path(:language)
+
 class Topic < ActiveRecord::Base
 
   # Associations
@@ -14,12 +16,17 @@ class Topic < ActiveRecord::Base
   validates :body,    :presence => true, :on => :create
   validates :posts,   :presence => true, :allow_nil => false, :on => :update
   validates :user,    :presence => true
+  validates :title,   :language => true, if: :language?
+  validates :body,    :language => true, if: :language?
 
   # Scopes
   default_scope :order => 'sticky DESC, updated_at DESC'
 
   # Callbacks
   after_create :create_initial_post
+
+  # Delegates
+  delegate :language, :language?, to: :forum
 
   # Methods
   def hit!

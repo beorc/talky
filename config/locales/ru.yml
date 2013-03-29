@@ -164,3 +164,7 @@ ru:
         body: Сообщение
       post:
         body: Сообщение
+    errors:
+      messages:
+        language: "неверный язык сообщения, в данном разделе используется: %{language}"
+

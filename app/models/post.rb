@@ -1,3 +1,5 @@
+require Talky::Engine.validator_path(:language)
+
 class Post < ActiveRecord::Base
 
   # Associations
@@ -9,8 +11,8 @@ class Post < ActiveRecord::Base
   attr_accessible :body
 
   # Validations
-  validates :body, :presence => true
-  validates :user, :presence => true
+  validates :body, :user, :topic, :forum, :presence => true
+  validates :body, :language => true, if: :language?
 
   # Default Scope
   default_scope :order => 'created_at ASC'
@@ -22,6 +24,9 @@ class Post < ActiveRecord::Base
 
   # Callbacks
   before_save :topic_locked?
+
+  # Delegates
+  delegate :language, :language?, to: :forum
 
   # Methods
   private
