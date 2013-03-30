@@ -4,7 +4,9 @@
     - if can? :manage, Category
       span.controls.right.smaller
         = link_to t('.new_forum'), new_forum_path
+        '&nbsp;
         = link_to t('.edit_category'), edit_category_path(category)
+        '&nbsp;
         = link_to t('.delete_category'), category_path(category), :confirm => t('.confirm_delete'), :method => :delete
 
   - if category.forums.any?
