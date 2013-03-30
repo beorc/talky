@@ -25,7 +25,7 @@ ru:
     show:
       subtitle: Раздел форума
       back_to_forum_list: Назад к списку разделов форума
-      new_topic: Новая тема
+      new_topic: Создать новую тему
       edit_forum: Редактировать форум
       delete_forum: Удалить форум
       confirm_delete: Удалить раздел?
@@ -39,7 +39,7 @@ ru:
   topics:
     access_denied: У вас нет прав на доступ к этому ресурсу
     form:
-      new: Создать новую тему
+      new: Новая тема
     show:
       back_to_forum: Назад к разделу форума
       edit: Редактировать
