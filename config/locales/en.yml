@@ -136,18 +136,22 @@ en:
         one: Category
         few: Categories
         many: Categories
+        other: Categories
       forum:
         one: Forum
         few: Forums
         many: Forums
+        other: Forums
       topic:
         one: Topic
         few: Topics
         many: Topics
+        other: Topics
       post:
         one: Post
         few: Posts
         many: Posts
+        other: Posts
     attributes:
       category:
         title: Title
@@ -167,4 +171,8 @@ en:
     errors:
       messages:
         language: "wrong post language, this section uses: %{language}"
+
+  mailer:
+    posts:
+      topic: 'Langtrainer: new message on forum'
 

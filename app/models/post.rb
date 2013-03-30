@@ -24,6 +24,7 @@ class Post < ActiveRecord::Base
 
   # Callbacks
   before_save :topic_locked?
+  after_save :send_notifications
 
   # Delegates
   delegate :language, :language?, to: :forum
@@ -35,5 +36,17 @@ class Post < ActiveRecord::Base
         errors.add(:base, "That topic is locked")
         false
       end
+    end
+
+    def send_notifications
+      return if user.admin?
+      emails = ::User.admins.map(&:email).compact
+      return if emails.empty?
+
+      PostsMailer.delay.send_notification_email(emails, post_url_options: { id: id },
+                                                        topic_url_options: { id: topic.id },
+                                                        topic: topic.title,
+                                                        user: user.title,
+                                                        message: body)
     end
 end

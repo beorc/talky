@@ -168,3 +168,6 @@ ru:
       messages:
         language: "неверный язык сообщения, в данном разделе используется: %{language}"
 
+  mailer:
+    posts:
+      topic: 'Langtrainer: новое сообщение на форуме'
