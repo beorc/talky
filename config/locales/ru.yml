@@ -152,16 +152,20 @@ ru:
       category:
         title: Заголовок
         position: Позиция
-        state: Активная
+        state: Состояние
+        slug: Идентификатор
       forum:
         category: Категория
         title: Заголовок
         description: Описание
         position: Позиция
         state: Состояние
+        slug: Идентификатор
+        language: Язык
       topic:
         title: Заголовок
         body: Сообщение
+        slug: Идентификатор
       post:
         body: Сообщение
     errors:

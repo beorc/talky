@@ -157,15 +157,19 @@ en:
         title: Title
         position: Position
         state: State
+        slug: Slug
       forum:
         category: Category
         title: Title
         description: Description
         position: Position
         state: State
+        slug: Slug
+        language: Language
       topic:
         title: Title
         body: Body
+        slug: Slug
       post:
         body: Body
     errors:

@@ -1,6 +1,8 @@
 require Talky::Engine.validator_path(:language)
 
 class Topic < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 
   # Associations
   has_many :posts, :dependent => :destroy
@@ -9,7 +11,7 @@ class Topic < ActiveRecord::Base
 
   # Accessors
   attr_accessor :body
-  attr_accessible :title, :body, :sticky, :locked
+  attr_accessible :title, :body, :sticky, :locked, :slug
 
   # Validations
   validates :title,   :presence => true
@@ -31,6 +33,10 @@ class Topic < ActiveRecord::Base
   # Methods
   def hit!
     self.class.increment_counter :hits, id
+  end
+
+  def should_generate_new_friendly_id?
+    new_record? && !slug
   end
 
   private

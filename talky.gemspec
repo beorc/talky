@@ -23,4 +23,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'simple_form'
   s.add_dependency 'responders'
   s.add_dependency 'whatlanguage'
+  s.add_dependency 'friendly_id', '~> 4.0.9'
 end
