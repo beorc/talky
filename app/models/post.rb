@@ -43,8 +43,8 @@ class Post < ActiveRecord::Base
       emails = ::User.admins.map(&:email).compact
       return if emails.empty?
 
-      PostsMailer.delay.send_notification_email(emails, post_url_options: { id: id },
-                                                        topic_url_options: { id: topic.id },
+      PostsMailer.delay.send_notification_email(emails, post_url_options: { id: to_param },
+                                                        topic_url_options: { id: topic.to_param },
                                                         topic: topic.title,
                                                         user: user.title,
                                                         message: body)
