@@ -1,0 +1,182 @@
+en:
+  categories:
+    access_denied: Access denied
+    index:
+      subtitle: Categories list
+      new_forum_category: Create category
+    form:
+      new: New category
+    forum:
+      no_posts: No posts
+    category:
+      new_forum: New forum
+      edit_category: Edit category
+      delete_category: Delete category
+      confirm_delete: Are you sure?
+      table_headers:
+        forum: Forum
+        last_post: Last post
+
+  forums:
+    access_denied: Access denied
+    form:
+      new: New forum
+      subtitle: Forums
+    show:
+      subtitle: Forum
+      back_to_forum_list: Back to forum list
+      new_topic: New topic
+      edit_forum: Edit forum
+      delete_forum: Delete forum
+      confirm_delete: Are you sure?
+      table_headers:
+        replies: Replies
+        views: Views
+        last_post: Last post
+    topic:
+      by: by
+
+  topics:
+    access_denied: Access denied
+    form:
+      new: New topic
+    show:
+      back_to_forum: Back to forum
+      edit: Edit
+      delete: Delete
+      confirm_delete: Are you sure?
+      unstick: Unstick
+      sticky: Sticky
+      unlock: Unlock
+      lock: Lock
+    post:
+      author:
+        posts: Posts
+        registered: Registered
+      posted: Posted
+      reply: Reply
+      quote: Quote
+      edit: Edit
+      delete: Delete
+      confirm_delete: Are you sure?
+
+  posts:
+    access_denied: Access deined
+
+    form:
+      new: New post
+
+  flash:
+    actions:
+      create:
+        notice: "%{resource_name} successfully created."
+      update:
+        notice: "%{resource_name} successfully updated."
+      destroy:
+        notice: "%{resource_name} successfully deleted."
+
+    categories:
+      create:
+        notice: Category successfully created.
+      update:
+        notice: Category successfully updated.
+      destroy:
+        notice: Category successfully deleted.
+      access_denied: Access denied
+
+    forums:
+      create:
+        notice: Forum successfully created.
+      update:
+        notice: Forum successfully updated.
+      destroy:
+        notice: Forum successfully deleted.
+      access_denied: Access denied
+
+    topics:
+      create:
+        notice: Topic successfully created.
+      update:
+        notice: Topic successfully updated.
+      destroy:
+        notice: Topic successfully deleted.
+      access_denied: Access denied
+
+    posts:
+      create:
+        notice: Post successfully created.
+      update:
+        notice: Post successfully updated.
+      destroy:
+        notice: Post successfully deleted.
+      access_denied: Access denied
+
+  helpers:
+    submit:
+      category:
+        new: New category
+        create: Create category
+        update: Save
+      forum:
+        new: New forum
+        create: Create forum
+        update: Save
+      topic:
+        new: New topic
+        create: Create topic
+        update: Save
+      post:
+        new: New post
+        create: Create post
+        update: Save
+
+  activerecord:
+    models:
+      category:
+        one: Category
+        few: Categories
+        many: Categories
+        other: Categories
+      forum:
+        one: Forum
+        few: Forums
+        many: Forums
+        other: Forums
+      topic:
+        one: Topic
+        few: Topics
+        many: Topics
+        other: Topics
+      post:
+        one: Post
+        few: Posts
+        many: Posts
+        other: Posts
+    attributes:
+      category:
+        title: Title
+        position: Position
+        state: State
+        slug: Slug
+      forum:
+        category: Category
+        title: Title
+        description: Description
+        position: Position
+        state: State
+        slug: Slug
+        language: Language
+      topic:
+        title: Title
+        body: Body
+        slug: Slug
+      post:
+        body: Body
+    errors:
+      messages:
+        language: "wrong post language, this section uses: %{language}"
+
+  mailer:
+    posts:
+      topic: 'Langtrainer: new message on forum'
+
