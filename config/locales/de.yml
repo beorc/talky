@@ -1,182 +1,182 @@
 en:
   categories:
-    access_denied: Access denied
+    access_denied: Zugriff verweigert
     index:
-      subtitle: Categories list
-      new_forum_category: Create category
+      subtitle: Liste der Kategorien
+      new_forum_category: erstellen Kategorie
     form:
-      new: New category
+      new: Neue Kategorie
     forum:
-      no_posts: No posts
+      no_posts: Keine Beiträge
     category:
-      new_forum: New forum
-      edit_category: Edit category
-      delete_category: Delete category
-      confirm_delete: Are you sure?
+      new_forum: Neue forum
+      edit_category: Bearbeiten Kategorie
+      delete_category: Kategorie löschen
+      confirm_delete: Sind Sie sicher?
       table_headers:
         forum: Forum
-        last_post: Last post
+        last_post: Letzter Beitrag
 
   forums:
-    access_denied: Access denied
+    access_denied: Zugriff verweigert
     form:
-      new: New forum
-      subtitle: Forums
+      new: Neue forum
+      subtitle: Foren
     show:
       subtitle: Forum
-      back_to_forum_list: Back to forum list
-      new_topic: New topic
-      edit_forum: Edit forum
-      delete_forum: Delete forum
-      confirm_delete: Are you sure?
+      back_to_forum_list: Zurück zur Forenliste
+      new_topic: neues Thema
+      edit_forum: Bearbeiten forum
+      delete_forum: Löschen forum
+      confirm_delete: Sind Sie sicher?
       table_headers:
-        replies: Replies
-        views: Views
-        last_post: Last post
+        replies: Antworten
+        views: Aufrufe
+        last_post: Letzter Beitrag
     topic:
-      by: by
+      by: von
 
   topics:
-    access_denied: Access denied
+    access_denied: Zugriff verweigert
     form:
-      new: New topic
+      new: Neue Thema
     show:
-      back_to_forum: Back to forum
-      edit: Edit
-      delete: Delete
-      confirm_delete: Are you sure?
+      back_to_forum: Zurück zum Forum
+      edit: Bearbeiten
+      delete: Löschen
+      confirm_delete: Sind Sie sicher?
       unstick: Unstick
       sticky: Sticky
       unlock: Unlock
       lock: Lock
     post:
       author:
-        posts: Posts
-        registered: Registered
-      posted: Posted
-      reply: Reply
-      quote: Quote
-      edit: Edit
-      delete: Delete
-      confirm_delete: Are you sure?
+        posts: Beiträge
+        registered: Eingetragen
+      posted: Verfasst
+      reply: Antworten
+      quote: Zitieren
+      edit: Bearbeiten
+      delete: Löschen
+      confirm_delete: Sind Sie sicher?
 
   posts:
-    access_denied: Access deined
+    access_denied: Zugriff verweigert
 
     form:
-      new: New post
+      new: Neue Post
 
   flash:
     actions:
       create:
-        notice: "%{resource_name} successfully created."
+        notice: "%{resource_name} erfolgreich erstellt."
       update:
-        notice: "%{resource_name} successfully updated."
+        notice: "%{resource_name} erfolgreich aktualisiert."
       destroy:
-        notice: "%{resource_name} successfully deleted."
+        notice: "%{resource_name} erfolgreich gelöscht."
 
     categories:
       create:
-        notice: Category successfully created.
+        notice: Kategorie erfolgreich erstellt.
       update:
-        notice: Category successfully updated.
+        notice: Kategorie erfolgreich aktualisiert.
       destroy:
-        notice: Category successfully deleted.
-      access_denied: Access denied
+        notice: Kategorie erfolgreich gelöscht.
+      access_denied: Zugriff verweigert
 
     forums:
       create:
-        notice: Forum successfully created.
+        notice: Forum erstellt aktualisiert.
       update:
-        notice: Forum successfully updated.
+        notice: Forum aktualisiert erfolgreich.
       destroy:
-        notice: Forum successfully deleted.
-      access_denied: Access denied
+        notice: Forum gelöscht erfolgreich.
+      access_denied: Zugriff verweigert
 
     topics:
       create:
-        notice: Topic successfully created.
+        notice: Thema erstellt erfolgreich.
       update:
-        notice: Topic successfully updated.
+        notice: Thema aktualisiert erfolgreich.
       destroy:
-        notice: Topic successfully deleted.
-      access_denied: Access denied
+        notice: Thema aktualisiert erfolgreich.
+      access_denied: Zugriff verweigert
 
     posts:
       create:
-        notice: Post successfully created.
+        notice: Post erstellt erfolgreich.
       update:
-        notice: Post successfully updated.
+        notice: Post aktualisiert erfolgreich.
       destroy:
-        notice: Post successfully deleted.
-      access_denied: Access denied
+        notice: Post gelöscht erfolgreich.
+      access_denied: Zugriff verweigert
 
   helpers:
     submit:
       category:
-        new: New category
-        create: Create category
-        update: Save
+        new: Neue Kategorie
+        create: Erstellen Kategorie
+        update: Sparen
       forum:
-        new: New forum
-        create: Create forum
-        update: Save
+        new: Neue Forum
+        create: Erstellen Forum
+        update: Sparen
       topic:
-        new: New topic
-        create: Create topic
-        update: Save
+        new: Neue Thema
+        create: Erstellen Thema
+        update: Sparen
       post:
-        new: New post
-        create: Create post
-        update: Save
+        new: Neue Post
+        create: Erstellen Post
+        update: Sparen
 
   activerecord:
     models:
       category:
-        one: Category
-        few: Categories
-        many: Categories
-        other: Categories
+        one: Kategorie
+        few: Kategorien
+        many: Kategorien
+        other: Kategorien
       forum:
         one: Forum
-        few: Forums
-        many: Forums
-        other: Forums
+        few: Foren
+        many: Foren
+        other: Foren
       topic:
-        one: Topic
-        few: Topics
-        many: Topics
-        other: Topics
+        one: Thema
+        few: Themen
+        many: Themen
+        other: Themen
       post:
         one: Post
-        few: Posts
-        many: Posts
-        other: Posts
+        few: Beiträge
+        many: Beiträge
+        other: Beiträge
     attributes:
       category:
-        title: Title
+        title: Titel
         position: Position
-        state: State
-        slug: Slug
+        state: Zustand
+        slug: Permalink
       forum:
-        category: Category
-        title: Title
-        description: Description
+        category: Kategorie
+        title: Titel
+        description: Beschreibung
         position: Position
-        state: State
-        slug: Slug
-        language: Language
+        state: Zustand
+        slug: Permalink
+        language: Sprachen
       topic:
-        title: Title
+        title: Titel
         body: Body
-        slug: Slug
+        slug: Permalink
       post:
         body: Body
     errors:
       messages:
-        language: "wrong post language, this section uses: %{language}"
+        language: "falschen Beitrag Sprache, wird in diesem Abschnitt: %{language}"
 
   mailer:
     posts:
-      topic: 'Langtrainer: new message on forum'
+      topic: 'Langtrainer: neue Nachricht im Forum'
 
